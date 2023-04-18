@@ -10,6 +10,13 @@
 
 </head>
 <style>
+
+.form{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
  .alert{
     margin-top: 20px;
   }
@@ -20,7 +27,7 @@
   {% include "school/navbar.html" %}
   <br><br>
 
-  <center>
+  <center class="form">
     <h3 class='alert alert-success'>Send Us Your Valuable Feedback !</h3>
 
     <form method="POST">

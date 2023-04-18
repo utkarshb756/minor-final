@@ -15,6 +15,15 @@
       font-family: 'Roboto', sans-serif;
     }
 
+    .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 37px;
+}
+
     a:link {
       text-decoration: none;
     }
@@ -32,6 +41,8 @@
       padding: 5%;
       border: 1px solid #ced4da;
       margin-bottom: 2%;
+      display: flex;
+      flex-direction: column;
     }
 
     .form-control {
@@ -46,7 +57,13 @@
       cursor: pointer;
       background: #0062cc;
       color: #fff;
+      margin: 0 auto;
     }
+    p {
+    margin-top: 0;
+    background-color: #0062cc;
+    margin-bottom: 1rem;
+}
   </style>
 
 
@@ -62,8 +79,8 @@
   <br>
   <br><br>
 
-  <!--- signup page for teacher by admin(sumit)  ---------->
-  <form method="post">
+  <!--- login page for students  ---------->
+  <form method="post" onsubmit="return validateForm()">
     {% csrf_token %}
     <div class="container register-form">
       <div class="form">
@@ -98,7 +115,11 @@
 
   <br><br><br>
 
-  
+  <script>
+     
+    
+  </script>
 </body>
+
 
 </html>
