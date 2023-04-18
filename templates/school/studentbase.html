@@ -43,12 +43,14 @@
         
     }
 
- .icon-head{
+    .icon-head{
   display: flex;
-  align-items: center;
- gap: 3px;
+    align-items: center;
+    gap: 3px;
+    margin-top: 17px;
+    justify-content: center;
+    margin-right: 10px;
  }
-
    
 
    
@@ -123,6 +125,10 @@
       display: none;
     }
 
+    #check:checked~.sidebar .icon-head{
+      display: none;
+    }
+
     #check:checked~.sidebar a {
       font-size: 20px;
       margin-left: 170px;
@@ -133,12 +139,18 @@
 
     .content {
       margin-left: 250px;
-      background: url(background.png) no-repeat;
-      background-position: center;
-      background-size: cover;
+      position: absolute;
+      top: 0px;
+      width: 83%;
       height: 100vh;
       transition: 0.5s;
+      background-color: ghostwhite;
     }
+    #check:checked~.content {
+      margin-left: 60px;
+      width: 96%;
+    }
+    
 
     #check:checked~.content {
       margin-left: 60px;
@@ -168,12 +180,7 @@
     <img src="../static/images/logo2.png" alt="" width="50px" height="50px">
     <h3 class="heading">SkoolForce</h3>
    </div>
-    <center>
-
-      <img src="{% static "images/admin.png" %}" class="profile_image" alt="">
-      <h4>{{request.user.first_name}}</h4>
-
-    </center>
+   
 
    
     <a href="/student-dashboard"><i class="fas fa-desktop"></i><span>Dashboard</span></a>

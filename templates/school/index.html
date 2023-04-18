@@ -8,14 +8,13 @@
 
   <style media="screen">
     
-    .body{
-      background-image: url(../static/images/bg-image.png);
-    }
-.bg-image
-{
-  background-size: cover ;
-  opacity: 0.6;
-}
+  body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
     .alert {
       margin: 0px;
     }
@@ -34,6 +33,36 @@
       animation: glow 1s ease-in-out infinite alternate;
     }
 
+    .Welcome{
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+   
+    }
+
+
+    .user-type{
+      display: flex;
+      gap: 5px;
+      justify-content: center;
+
+    }
+
+    .user-type a{
+     
+      padding: 10px;
+      border-radius: 10px;
+      background-color: greenyellow;
+      outline: none;
+      color: white;
+      text-decoration: none;
+    }
+
+
+    .home{
+      display: flex;
+      flex-direction: column;
+    }
    
 
 
@@ -47,14 +76,22 @@
 </head>
 
 <body>
-  <img class="bg-image" src="../static/images/bg-image.png" width="1500px" height="1000px" alt="">
-  {% include "school/navbar.html" %}
+ 
   <br><br><br>
 
-  <h1 class="display-4 glow">Welcome to SkoolForce</h1>
-  
- <br><br><br>
+  <div class="home">
+  <h1 class="Welcome">Welcome to SkoolForce</h1>
 
+  <div class="user-type">
+  
+    <a href="/adminclick" >Admin</a>
+    <a href="/teacherclick" >Teacher</a>
+    <a href="/studentclick" >Student</a>
+</div>
+</div>
+  
+  <br><br><br>
+  
  
 
 
